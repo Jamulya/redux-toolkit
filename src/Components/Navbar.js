@@ -2,8 +2,10 @@ import React from 'react'
 import '../App.css'
 import { HomeOutlined, ShoppingCartCheckout } from '@mui/icons-material'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const Navbar = () => {
+    const selector = useSelector((item) => item.cart)
   return (
     <div className='navbar' style={{
         display: 'flex',
@@ -19,10 +21,11 @@ const Navbar = () => {
             </Link>
            
             <div className='navItem'>
-                <Link className='navLink'>
+                <Link className='navLink' to='/cart'>
                     <ShoppingCartCheckout color='primary'/>
+
                 </Link>
-                <span className='cartCount'>0</span>
+                <span className='cartCount'>{selector.length}</span>
             </div>
         </div>
     </div>
