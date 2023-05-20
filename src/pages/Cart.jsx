@@ -1,13 +1,18 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import {remove} from '../Redux/cartSlice'
 
 const Cart = () => {
     const products = useSelector((state) => state.cart);
     const dispatch = useDispatch();
 
     const handleRemove=(id) => {
-        
+        dispatch(remove(id))
     }
+
+    const total = products.reduce((acc, i) =>
+    acc + i.price, 0
+    )
 
   return (
     <div>
@@ -18,13 +23,13 @@ const Cart = () => {
                 <img src={product.image} alt="" />
                 <h5>{product.title}</h5>
                 <h5>{product.price}</h5>
-                <button className='btn'>remove</button>
+                <button className='btn' onClick={() => handleRemove(product.id)}>remove</button>
 
             </div>
             ))}
           
             <div>
-                <h5>total:</h5>
+                <h5>total: {total}</h5>
             </div>
 
         </div>

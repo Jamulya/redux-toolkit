@@ -38,26 +38,57 @@
 }
 
 
-.navLink {
+.navLink{
   padding-right: 25px;
   text-decoration: none;
-  color: beige;
-  /* background-color: #282c34; */
-}
-
-.navbar {
+  color: rgb(255, 255, 255);
   background-color: #282c34;
-  color: aquamarine;
+ 
+  
 }
-
-.navItems {
-  display: flex;
-  margin-right: 20px;
-  padding: 10px;
+.navbar{
+  background-color: #282c34;
+  color: #61dafb;
 }
-
-.navItem {
+.navItems{
+         display: flex;
+         margin-right: 20px;
+         padding: 10px;
+    
+}
+.navItem{
   align-items: center;
   width: 100%;
 }
 
+img {
+  height: 80px;
+}
+
+
+.card {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+.productsWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.btn {
+  border: none;
+  outline: none;
+  background: #764abc;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #513282;
+}
