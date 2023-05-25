@@ -1,8 +1,9 @@
 import React from 'react'
 import '../App.css'
-import { HomeOutlined, ShoppingCartCheckout } from '@mui/icons-material'
+import { AccountCircle, HomeOutlined, ShoppingCartCheckout } from '@mui/icons-material'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+
 
 const Navbar = () => {
     const selector = useSelector((item) => item.cart)
@@ -23,9 +24,11 @@ const Navbar = () => {
             <div className='navItem'>
                 <Link className='navLink' to='/cart'>
                     <ShoppingCartCheckout color='primary'/>
-
                 </Link>
                 <span className='cartCount'>{selector.length}</span>
+                <Link to='/login'>
+                    <AccountCircle color='primary'/>
+                </Link>
             </div>
         </div>
     </div>
