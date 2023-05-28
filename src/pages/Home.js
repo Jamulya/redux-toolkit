@@ -1,11 +1,14 @@
 import React from 'react'
 import Products from '../Components/Products'
+import Helmet from '../Components/Helmet'
 
 const Home = () => {
   return (
-    <div>
-      <Products/>
-    </div>
+   <Helmet title={'Home'}>
+     <Products/>
+   </Helmet>
+     
+    
   )
 }
 

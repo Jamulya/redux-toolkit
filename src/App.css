@@ -92,3 +92,57 @@ img {
 .btn:hover {
   background: #513282;
 }
+.cartCount{
+  padding-right: 20px;
+}
+
+.userIcon{
+  position: relative;
+  width: 21px;
+  height: 21px;
+  background: #fff;
+  border-radius: 7px;
+}
+.profile img {
+  border-radius: 50%;
+}
+
+.profile {
+  position: relative;
+  z-index: 9;
+}
+
+.profile__actions{
+  position: absolute;
+  top: 100%;
+  left: -10px;
+  width: 86px;
+  z-index: 10;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  line-height: 30px;
+  display: none;
+  cursor: pointer;
+  color: #282c34;
+
+}
+
+.show__profileActions{
+  display: block;
+}
+
+
+.profile__links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.profile__links a {
+  text-decoration: none;
+  color: #282c34;
+}
